@@ -1,0 +1,13 @@
+{
+  "visualization": {
+    "id": "dynamic-donut-widget",
+    "name": "Dynamic Donut Widget",
+    "description": "Displays Portfolio Name, Amount, and Percentage as a Donut Chart.",
+    "icon": "donut_small",
+    "logoUrl": "",
+    "packageUrl": "https://john24alex.github.io/Labs/index.html",
+    "supportedDataTypes": ["TABLE"],
+    "supportsCalculatedFields": true,
+    "supportedStyleElements": []
+  }
+}
