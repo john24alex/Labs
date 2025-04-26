@@ -1,13 +1,23 @@
 {
-  "visualization": {
-    "id": "dynamic-donut-widget",
-    "name": "Dynamic Donut Widget",
-    "description": "Displays Portfolio Name, Amount, and Percentage as a Donut Chart.",
-    "icon": "donut_small",
-    "logoUrl": "",
-    "packageUrl": "https://john24alex.github.io/Labs/index.html",
-    "supportedDataTypes": ["TABLE"],
-    "supportsCalculatedFields": true,
-    "supportedStyleElements": []
-  }
+  "name": "Dynamic Donut Widget",
+  "logoUrl": "https://www.design-book.me/Labs/test/icon.png",
+  "organization": "John24Alex Labs",
+  "organizationUrl": "https://www.design-book.me",
+  "termsOfServiceUrl": "https://www.design-book.me/skills/",
+  "supportUrl": "https://www.design-book.me/skills/",
+  "privacyPolicyUrl": "https://www.design-book.me/skills/",
+  "packageUrl": "https://www.design-book.me/Labs/test/",
+  "description": "Displays Portfolio Name, Amount, and Percentage as a Donut Chart.",
+  "devMode": true,
+  "components": [
+    {
+      "id": "dynamicDonut",
+      "name": "Dynamic Donut",
+      "iconUrl": "https://www.design-book.me/Labs/test/icon.png",
+      "description": "A donut chart showing percentage completion.",
+      "resource": {
+        "js": "https://john24alex.github.io/Labs/index.js"
+      }
+    }
+  ]
 }
