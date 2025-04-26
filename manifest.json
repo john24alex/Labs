@@ -1,22 +1,22 @@
 {
   "name": "Dynamic Donut Widget",
-  "logoUrl": "https://labs-git-main-johns-projects-aeea3e1f.vercel.app/icon.png",
+  "logoUrl": "https://www.spot-app.app/icon.png",
   "organization": "John24Alex Labs",
-  "organizationUrl": "https://john24alex.github.io/",
-  "termsOfServiceUrl": "https://john24alex.github.io/",
-  "supportUrl": "https://john24alex.github.io/",
-  "privacyPolicyUrl": "https://john24alex.github.io/",
-  "packageUrl": "https://labs-git-main-johns-projects-aeea3e1f.vercel.app/",
+  "organizationUrl": "https://www.spot-app.app",
+  "termsOfServiceUrl": "https://www.spot-app.app",
+  "supportUrl": "https://www.spot-app.app",
+  "privacyPolicyUrl": "https://www.spot-app.app",
+  "packageUrl": "https://www.spot-app.app",
   "description": "Displays Portfolio Name, Amount, and Percentage as a Donut Chart.",
   "devMode": true,
   "components": [
     {
       "id": "dynamicDonut",
       "name": "Dynamic Donut",
-      "iconUrl": "https://labs-git-main-johns-projects-aeea3e1f.vercel.app/icon.png",
+      "iconUrl": "https://www.spot-app.app/icon.png",
       "description": "A donut chart showing percentage completion.",
       "resource": {
-        "js": "https://labs-git-main-johns-projects-aeea3e1f.vercel.app/index.js"
+        "js": "https://www.spot-app.app/index.js"
       }
     }
   ]
