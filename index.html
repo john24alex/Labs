@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Donut Widget</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .donut {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .donut svg {
+            transform: rotate(-90deg);
+        }
+
+        .donut circle {
+            fill: none;
+            stroke-width: 10;
+        }
+
+        .donut .bg {
+            stroke: #eee;
+        }
+
+        .donut .progress {
+            stroke: #4caf50;
+            stroke-linecap: round;
+            stroke-dasharray: 314;
+            stroke-dashoffset: 314;
+            transition: stroke-dashoffset 1s ease;
+        }
+
+        .percentage-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="portfolio">Portfolio Name</h2>
+    <p id="amount">$0</p>
+
+    <div class="donut">
+        <svg width="100" height="100">
+            <circle class="bg" cx="50" cy="50" r="50"></circle>
+            <circle class="progress" cx="50" cy="50" r="50"></circle>
+        </svg>
+        <div class="percentage-text" id="percentage">0%</div>
+    </div>
+
+    <script>
+        google.visualization.events.addListener(
+            google.visualization,
+            'ready',
+            () => { }
+        );
+
+        function drawViz(data) {
+            // Read data
+            const portfolio = data.tables.DEFAULT[0].values[0][0]; // First column
+            const amount = data.tables.DEFAULT[0].values[0][1]; // Second column
+            const percentage = data.tables.DEFAULT[0].values[0][2]; // Third column
+
+            // Update content
+            document.getElementById('portfolio').textContent = portfolio || 'No Data';
+            document.getElementById('amount').textContent = `$${Number(amount || 0).toLocaleString()}`;
+            document.getElementById('percentage').textContent = `${percentage || 0}%`;
+
+            // Update donut
+            const circle = document.querySelector('.donut .progress');
+            const circumference = 2 * Math.PI * 50;
+            const offset = circumference * (1 - (percentage / 100));
+            circle.style.strokeDashoffset = offset;
+        }
+
+        // Locker calls this automatically
+        window.drawViz = drawViz;
+    </script>
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+</body>
+
+</html>
